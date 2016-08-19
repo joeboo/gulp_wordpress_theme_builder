@@ -1,0 +1,33 @@
+/*!
+Theme Name: MrTandCoffee
+Theme URI: https://github.com/joeboo/mrtandcoffee-wordpress.git
+Author: Kanisorn Janrungsri
+Author URI: http://www.mrtandcoffee.co.uk/
+Description: 
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: MrTandCoffee
+Tags:
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+/* ----------------------------------------------------------------------------
+ * Mixins & Variables
+ * ------------------------------------------------------------------------- */
+@import "partials/mixins";
+@import "partials/variables";
+
+/* ----------------------------------------------------------------------------
+ * Normalize & Santize
+ * ------------------------------------------------------------------------- */
+@import "vendor/normalize";
+@import "vendor/sanitize";
+
+/* ----------------------------------------------------------------------------
+ * Structure
+ * ------------------------------------------------------------------------- */
+@import "partials/structure";
+
+/* WPCore */
+@import "partials/wpcore";
