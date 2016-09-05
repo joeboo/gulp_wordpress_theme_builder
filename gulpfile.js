@@ -123,7 +123,7 @@ gulp.task('styles', function () {
 			.pipe(notify({ message: 'Styles task complete', onLast: true }))
 });
 
-
+/*
 gulp.task('browserifyVendorsJs', function() {
     return browserify('./js/vendors.js')
         .bundle()
@@ -137,7 +137,19 @@ gulp.task('browserifyVendorsJs', function() {
         .pipe(gulp.dest('./assets/'))
         .pipe(notify({ message: 'Custom scripts task complete', onLast: true }));
 
+});*/
+
+
+gulp.task('browserifyVendorsJs', function() {
+    return browserify('./js/vendors.js')
+        .bundle()
+        .pipe(source('./js/vendors.min.js'))
+        .pipe(buffer()) // <----- convert from streaming to buffered vinyl file object
+        .pipe(uglify()) // now gulp-uglify works 
+        .pipe(gulp.dest('.'))
+        .pipe(notify({ message: 'Custom scripts task complete', onLast: true }));
 });
+
 
 
 
